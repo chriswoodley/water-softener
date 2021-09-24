@@ -12,6 +12,12 @@ The following PM2 commands are used to start, stop, and monitor the daemon proce
 
 `604800000` is equivalent to 7 days in milliseconds.
 
+To run with environment variables:
+
+```
+DEVICE_ID=xxx ACCESS_KEY=xxx ACCESS_SECRET=xxx pm2 start ${pathtoyourapp}/app.js --restart-delay 10000 --update-env
+```
+
 `pm2 monit`
 
 This will print a graphical ui in the terminal that shows realtime process data. This command is good for debugging what is going on with the app.
