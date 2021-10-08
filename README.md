@@ -8,14 +8,14 @@ This app will run once every week and report the distance using PM2. PM2 is a da
 
 The following PM2 commands are used to start, stop, and monitor the daemon process:
 
-`pm2 start src/app.js --restart-delay 604800000`
+`pm2 start src/app.js --restart-delay 86400000`
 
-`604800000` is equivalent to 7 days in milliseconds.
+`86400000` is equivalent to 1 day in milliseconds.
 
 To run with environment variables:
 
 ```
-DEVICE_ID=xxx ACCESS_KEY=xxx ACCESS_SECRET=xxx pm2 start ${pathtoyourapp}/app.js --restart-delay 10000 --update-env
+DEVICE_ID=xxx ACCESS_KEY=xxx ACCESS_SECRET=xxx pm2 start home/pi/Desktop/water-softener/src/app.js --restart-delay 86400000 --update-env
 ```
 
 `pm2 monit`
